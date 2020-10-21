@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+4.times do |i|
+Store.create(name: "#{Faker::Company.name} Grocery Store", description: Faker::Restaurant.description, url: Faker::Internet.url, status: Faker::Subscription.status, code: Faker::IDNumber.valid, address: Faker::Address.street_address, city: Faker::Address.city, state: Faker::Address.state, zip: Faker::Address.zip, country: Faker::Address.country)
+end
+
+4.times do |i|
+Department.create(store: Faker::IDNumber.valid, name: "#{Faker::Company.name} Grocery Store", description: Faker::Restaurant.description, code: Faker::IDNumber.valid)
+end
+
+4.times do |i|
+Employee.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: Faker::Company.buzzword, role: Faker::Job.title, status: Faker::Subscription.status, )
+end
+
+4.times do |i|
+Review.create(note: Faker::ChuckNorris.fact)
+end
