@@ -1,8 +1,16 @@
+<div class="container">
+<div class="row">
+<div class="col">
+
 <p id="notice"><%= notice %></p>
 
-<h1>Departments</h1>
+<h1 style="color:white;">Departments</h1>
+</div>
+</div>
+<div class="row">
+<div class="col">
 
-<table>
+<table class="table table-bordered table-dark">
   <thead>
     <tr>
       <th>Store</th>
@@ -15,16 +23,18 @@
   </thead>
 
   <tbody>
+    <body style="background-color:#80bfff;">
     <% @departments.each do |department| %>
       <tr>
-        <td><%= department.store_id %></td>
+        <td><%= department.store_id %></br>
         <td><%= department.name %></td>
         <td><%= department.description %></td>
         <td><%= department.code %></td>
         <td><%= department.store %></td>
-        <td><%= link_to 'Show', department %></td>
-        <td><%= link_to 'Edit', edit_department_path(department) %></td>
-        <td><%= link_to 'Destroy', department, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', department, class: "btn btn-primary" %></br></br>
+        <td><%= link_to 'Edit', edit_department_path(department), class: "btn btn-primary" %></br></br>
+        <td><%= link_to 'Destroy', department, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %></br>
+</td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +42,8 @@
 
 <br>
 
-<%= link_to 'New Department', new_department_path %>
+<%= link_to 'New Department', new_department_path, class: "btn btn-primary" %>
+
+</div>
+  </div>
+</div>

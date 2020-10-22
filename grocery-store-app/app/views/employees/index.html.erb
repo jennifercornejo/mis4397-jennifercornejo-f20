@@ -1,8 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+
 <p id="notice"><%= notice %></p>
 
-<h1>Employees</h1>
-
-<table>
+<h1 style="color:white;">Employees</h1>
+</div>
+</div>
+  <div class="row">
+    <div class="col">
+      
+<table class="table table-bordered table-dark">
   <thead>
     <tr>
       <th>First name</th>
@@ -16,6 +24,7 @@
   </thead>
 
   <tbody>
+    <body style="background-color:#80bfff;">
     <% @employees.each do |employee| %>
       <tr>
         <td><%= employee.first_name %></td>
@@ -24,9 +33,9 @@
         <td><%= employee.role %></td>
         <td><%= employee.status %></td>
         <td><%= employee.department %></td>
-        <td><%= link_to 'Show', employee %></td>
-        <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
-        <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', employee, class: "btn btn-primary" %></br></br>
+        <td><%= link_to 'Edit', edit_employee_path(employee), class: "btn btn-primary" %></br></br>
+        <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %></br></br>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +43,8 @@
 
 <br>
 
-<%= link_to 'New Employee', new_employee_path %>
+<%= link_to 'New Employee', new_employee_path, class: "btn btn-primary" %>
+
+  </div>
+  </div>
+</div>
