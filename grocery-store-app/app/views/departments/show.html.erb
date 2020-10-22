@@ -1,6 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="column m-auto">
+     <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Department</h5>
+          <h6 class="card-subtitle">Department Information</h6>
+          <p class="card-text"><p>
+            <p>
+  
   <strong>Store:</strong>
   <%= @department.store_id %>
 </p>
@@ -27,3 +36,9 @@
 
 <%= link_to 'Edit', edit_department_path(@department) %> |
 <%= link_to 'Back', departments_path %>
+
+ </div>
+    </div>
+  </div>
+</div>
+</div>

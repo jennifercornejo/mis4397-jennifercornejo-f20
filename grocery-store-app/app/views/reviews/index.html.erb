@@ -1,8 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
 <p id="notice"><%= notice %></p>
 
-<h1>Reviews</h1>
-
-<table>
+<h1 style="color:white;">Reviews</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      
+<table class="table table-bordered table-dark">
   <thead>
     <tr>
       <th>Note</th>
@@ -12,6 +19,7 @@
   </thead>
 
   <tbody>
+     <body style="background-color:#80bfff;">
     <% @reviews.each do |review| %>
       <tr>
         <td><%= review.note %></td>
@@ -26,4 +34,8 @@
 
 <br>
 
-<%= link_to 'New Review', new_review_path %>
+<%= link_to 'New Review', new_review_path, class: "btn btn-primary" %>
+
+ </div>
+  </div>
+</div>

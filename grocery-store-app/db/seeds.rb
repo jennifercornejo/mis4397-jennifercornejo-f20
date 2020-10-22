@@ -18,5 +18,5 @@ Employee.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_
 end
 
 4.times do |i|
-Review.create(note: Faker::ChuckNorris.fact, store: @store_id)
+Review.create(note: Faker::TvShows::GameOfThrones.quote, store: @store_id)
 end

@@ -11,3 +11,5 @@
 
 # rails s to open my website
 # go into team corn then meme_website then rails s and preview -> preview running app.
+
+#index.html within views allows for you to edit each individual page
