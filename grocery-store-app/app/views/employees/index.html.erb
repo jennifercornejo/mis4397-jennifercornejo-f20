@@ -1,5 +1,5 @@
-<div class="container">
-  <div class="row">
+<div class="container-fluid">
+  <div class="row header">
     <div class="col">
 
 <p id="notice"><%= notice %></p>
@@ -11,10 +11,10 @@
 </div>
 <div class="row content">
 <% @employees.each do |employee| %>
-      <div class="col-md-3" >
+      <div class="col-md-3">
         <div class="card text-white bg-secondary mb-3" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title"><b>Employees: </b><%= employee.department.id %></h5>
+          <h5 class="card-title"><b>Employees:</b> <%= employee.department.id %></h5>
           <p class="card-text"><%= employee.first_name %></p>
           <p class="card-text"><%= employee.last_name %></p>
           <p class="card-text"><%= employee.description %></p>
@@ -29,12 +29,7 @@
           </div>
         </div>
       </div>
-      </div>
-  
-  
-
-      
-
+    </div>
 <% end %>
 </div>
 

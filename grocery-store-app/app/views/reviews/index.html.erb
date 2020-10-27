@@ -11,10 +11,10 @@
 <div class="row content">
 <% @reviews.each do |review| %>
       <div class="col-md-3" >
-        <div class="card text-white bg-secondary mb-3" style="width: 18rem;">
+        <div class="card text-white bg-secondary mb-3" style="width: 20rem;">
         <div class="card-body">
-          <p class="card-title"><b>Reviews </p>
-                    <p class="card-text"><%= review.note%></p>
+          <h5 class="card-title"><b> Reviews</b> </h5>
+          <p class="card-text"><%= review.note %></p>
           <p class="card-text"><%= review.store.id %></p>
           <div class="buttons">
           <button type="button" class="btn btn-dark"><%= link_to 'Show', review %></button>
@@ -24,7 +24,7 @@
         </div>
         </div>
         </div>
-        </div>
+    
     
   
 

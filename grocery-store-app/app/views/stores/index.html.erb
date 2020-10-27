@@ -12,9 +12,9 @@
 <div class="row content">
 <% @stores.each do |store| %>
       <div class="col-md-3" >
-        <div class="card text-white bg-secondary mb-3" style="width: 18rem;">
+        <div class="card text-white bg-secondary mb-3" style="width: 19rem;">
         <div class="card-body">
-          <h5 class="card-title"><b>Store: </b><%= store.name %></h5>
+          <h5 class="card-title">Store </br></p><%= store.name %></h5>
           <p class="card-text"><%= store.description %></p>
           <p class="card-text"><%= store.url %></p>
           <p class="card-text"><%= store.status %></p>
