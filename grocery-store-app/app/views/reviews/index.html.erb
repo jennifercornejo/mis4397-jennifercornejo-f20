@@ -4,34 +4,34 @@
 <p id="notice"><%= notice %></p>
 
 <h1 style="color:white;">Reviews</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
+<body style="background-color:#80bfff;">
+</div>
+</div>
+</div>
+<div class="row content">
+<% @reviews.each do |review| %>
+      <div class="col-md-3" >
+        <div class="card text-white bg-secondary mb-3" style="width: 18rem;">
+        <div class="card-body">
+          <p class="card-title"><b>Reviews </p>
+                    <p class="card-text"><%= review.note%></p>
+          <p class="card-text"><%= review.store.id %></p>
+          <div class="buttons">
+          <button type="button" class="btn btn-dark"><%= link_to 'Show', review %></button>
+          <button type="button" class="btn btn-dark"><%= link_to 'Edit', edit_review_path(review) %></button>
+          <button type="button" class="btn btn-dark"><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></button></p>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    
+  
+
       
-<table class="table table-bordered table-dark">
-  <thead>
-    <tr>
-      <th>Note</th>
-      <th>Store</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-     <body style="background-color:#80bfff;">
-    <% @reviews.each do |review| %>
-      <tr>
-        <td><%= review.note %></td>
-        <td><% review.store.id %></td>
-        <td><%= link_to 'Show', review %></td>
-        <td><%= link_to 'Edit', edit_review_path(review) %></td>
-        <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<% end %>
+</div>
 <br>
 
 <%= link_to 'New Review', new_review_path, class: "btn btn-primary" %>

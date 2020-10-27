@@ -4,60 +4,45 @@
       
       <p id="notice"><%= notice %></p>
       
-      <h1 style="color:white;">Stores</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      
-<table class="table table-bordered table-dark">
+           <h1 style="color:white;">Stores</h1>
+<body style="background-color:#80bfff;">
+</div>
+</div>
+</div>
+<div class="row content">
+<% @stores.each do |store| %>
+      <div class="col-md-3" >
+        <div class="card text-white bg-secondary mb-3" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><b>Store</b><%= store.name %></h5>
+          <p class="card-text"><%= store.description %></p>
+          <p class="card-text"><%= store.url %></p>
+          <p class="card-text"><%= store.status %></p>
+<p class="card-text"><%= store.code %></p>
+<p class="card-text"><%= store.address %></p>
+<p class="card-text"><%= store.city %></p>
+<p class="card-text"><%= store.state %></p>
+<p class="card-text"><%= store.zip %></p>
+<p class="card-text"><%= store.country %></p>
+          <div class="buttons">
+          <button type="button" class="btn btn-dark"><%= link_to 'Show', store %></button>
+          <button type="button" class="btn btn-dark"><%= link_to 'Edit', edit_store_path(store) %></button>
+          <button type="button" class="btn btn-dark"><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></button></p>
+          </div>
+        </div>
+      </div>
+      </div>
+  
+  
 
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Url</th>
-            <th>Status</th>
-            <th>Code</th>
-            <th>Address</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Zip</th>
-            <th>Country</th>
-            <th colspan="3"></th>
-          </tr>
-        </thead>
       
-        <tbody>
-          <body style="background-color:#80bfff;">
-          <% @stores.each do |store| %>
-            <tr>
-              <td><%= store.name %></td>
-              <td><%= store.description %></br>
-              <td><%= store.url %></td>
-              <td><%= store.status %></td>
-              <td><%= store.code %></td>
-              <td><%= store.address %></td>
-              <td><%= store.city %></td>
-              <td><%= store.state %></td>
-              <td><%= store.zip %></td>
-              <td><%= store.country %></td>
-              <td><%= link_to 'Show', store, class: "btn btn-primary" %></br> </br>
-              <%= link_to 'Edit', edit_store_path(store), class: "btn btn-primary" %><br/></br>
-              <%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %><br/>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-      
-      <br>
-      
-      <%= link_to 'New Store', new_store_path, class: "btn btn-primary" %>
 
-  </div>
-  </div>
+<% end %>
 </div>
 
+<br>
 
+<%= link_to 'New Store', new_store_path, class: "btn btn-primary" %>
 
+ </div>
+  </div>
