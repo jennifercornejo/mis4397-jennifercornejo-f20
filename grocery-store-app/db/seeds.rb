@@ -5,14 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-5.times do |i|
+4.times do |i|
 Store.create(name: Faker::Company.name, description: Faker::Restaurant.description, url: Faker::Internet.url, status: Faker::Subscription.status, code: Faker::IDNumber.valid, address: Faker::Address.street_address, city: Faker::Address.city, state: Faker::Address.state, zip: Faker::Address.zip, country: Faker::Address.country)
 end
 
 Store.all.each do |store|
-4.times do |i|
+3.times do |i|
 Department.create(store: store, name: Faker::Company.name, description: Faker::Restaurant.description, code: Faker::IDNumber.valid)
-Review.create(note: Faker::TvShows::GameOfThrones.quote, store: store)
+Review.create(note: Faker::Restaurant.review, store: store)
 end
 end
 
