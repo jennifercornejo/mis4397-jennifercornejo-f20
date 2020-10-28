@@ -1,0 +1,28 @@
+What is a resource?
+ Data files that accompany your executable code. These help make code-writing more feasible by simplifying simple tasks in terms of coding.
+
+ 
+
+What is REST?
+    REST is Rerpesentational State Transfer which is an architectural style that helps define the constraints that will be used in creating a web service.
+
+ 
+
+What is GET and POST?
+ GET is used to request data from a specific resource.
+ POST is used to send data to a server and to create or update a resource.
+
+ 
+
+What is an example of a custom route?
+ get 'profiles/dogs',:to => 'profiles#dogs_index'
+
+ 
+
+What is the purpose of the routes.rb file?
+ This file defines the actions that are available in your app and the type of actions you use like GET and POST.
+
+ 
+
+What is MVC?
+ Model View Controller, it separates an app into 3 compontents which helps with the development of user interfaces.
