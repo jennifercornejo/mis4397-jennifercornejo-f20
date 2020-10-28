@@ -7,30 +7,27 @@
 <body style="background-color:#80bfff;">
 </div>
 </div>
+</div>
 <div class="row content">
     <% @departments.each do |department| %>
-      <div class="col-md-3" >
+      <div class="col-md-3 d-flex align-items-stretch" style="float:right">
         <div class="card text-white bg-secondary mb-3" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Department: <%= department.store.id %></h5>
+<div class="card-body d-flex flex-column">
+  
+<h5 class="card-title">Department: <%= department.store.id %></h5>
           <p class="card-text"><%= department.name %></p>
           <p class="card-text"><%= department.description %></p>
           <p class="card-text"><%= department.code %></p>
-          <div class="buttons">
-          <button type="button" class="btn btn-dark"><%= link_to 'Show', department %></button>
+          <div class="card-button">
+          <button type="button" class= "btn btn-dark"><%= link_to 'Show', department %></button>
           <button type="button" class="btn btn-dark"><%= link_to 'Edit', edit_store_path(department) %></button>
           <button type="button" class="btn btn-dark"><%= link_to 'Destroy', department, method: :delete, data: { confirm: 'Are you sure?' } %></button>
           </div>
     </div>
     </div>
     </div>
-
-
-      
-
 <% end %>
-</div>
-
 <%= link_to 'New Department', new_department_path, class: "btn btn-primary" %>
 
 
+</div>
